@@ -1,0 +1,26 @@
+
+.homecontent
+{
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%,-50%);
+}
+.homecontent h2
+{
+    color:#ffffff ;
+    font-size: 100px;
+}
+.homecontent a
+{
+    margin-top: 10px;
+}
+
+li
+{
+    color: white;
+}
+
+#aboutUs{
+    font-family:sans-serif;
+}

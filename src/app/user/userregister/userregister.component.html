@@ -1,0 +1,72 @@
+<div class="card mt-5 p-3 mb-2 bg-secondary bg-gradient text-dark" style="align-items: center;">
+    <h1>User Register</h1>
+  </div>
+
+<div class="card mt-5" style="padding: 20px;">
+  <form [formGroup]="userRegisterForm"  (ngSubmit)="userRegister()">
+    <div class="form-group">
+      <label for="userEmail">User Email</label>
+      <input type="email" class="form-control" id="userEmail" formControlName="userEmail" placeholder="Enter Email">
+    </div>
+
+    <div class="form-group">
+        <label for="userPassword">User Password</label>
+        <input type="password" class="form-control" id="userPassword" formControlName="userPassword" placeholder="Enter Password">
+    </div>
+
+    <!-- <div class="form-group">
+      <label for="userTitle">Title</label>
+      <input class="form-control" id="userTitle" formControlName="userTitle" placeholder="Enter title">
+  </div> -->
+
+  <div class="input">
+    <label for="userTitle">Title</label>
+    <select class="form-group form-floating form-select my-2 " aria-label="Default select example" name="userTitle" formControlName="userTitle" >
+    <option selected>Title</option>
+    <option value="Mr.">Mr.</option>
+    <option value="Miss">Miss</option>
+    <option value="Mrs.">Mrs.</option>
+  </select>
+  </div>
+
+  <div class="form-group">
+    <label for="userFirstName">Firstname</label>
+    <input type="text" class="form-control" id="userFirstName" formControlName="userFirstName" placeholder="Enter Firstname">
+</div>
+
+<div class="form-group">
+  <label for="userLastName">Lastname</label>
+  <input type="text" class="form-control" id="userLastName" formControlName="userLastName" placeholder="Enter Lastname">
+</div>
+
+<div class="form-group">
+  <label for="userDob">Date of Birth</label>
+  <input type="date" class="form-control" id="userDob" formControlName="userDob" placeholder="Enter Date of birth">
+</div>
+
+<div class="form-group">
+  <label for="userPhone">Phone number</label>
+  <input type="number" class="form-control" id="userPhone" formControlName="userPhone" placeholder="Enter phone number">
+</div>
+
+<!-- <div class="form-group">
+  <label for="que">Security Question</label>
+  <input  class="form-control" id="que" formControlName="que" placeholder="Enter Security question">
+</div> -->
+<div>
+  <label for="que">Security Question</label>
+  <select class="form-group form-floating form-select my-2 " aria-label="Default select example" name="que" formControlName="que" >
+  <option selected>Security Question</option>
+  <option value="Pet">Whats is your pet name?</option>
+  <option value="Sportsman">Who is your Favourite Sportsman?</option>
+  <option value="Friend">Who is your best friend</option>
+</select>
+</div>
+
+<div class="form-group">
+  <label for="ans">Answer</label>
+  <input class="form-control" id="ans" formControlName="ans" placeholder="Enter Answer">
+</div>
+    <button style='margin-top:12px ; margin-right:16px' type="submit" class="btn btn-primary" [disabled]="!userRegisterForm.valid" >Sign up</button>
+  </form>
+</div>

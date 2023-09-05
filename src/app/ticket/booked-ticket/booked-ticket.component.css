@@ -1,0 +1,18 @@
+div {
+    width: 500px;
+    margin: auto;
+  }
+
+input {
+    width: 460px;
+    
+  }
+
+select{
+    width: 425px;
+}
+
+#ok{
+    margin-top: 12px;
+    width: 425px;
+}

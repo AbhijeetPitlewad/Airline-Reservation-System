@@ -1,0 +1,102 @@
+
+    <div class="card mt-5 p-3 mb-2 bg-secondary bg-gradient text-dark" style="align-items: center;">
+        <h3>Proceed to Pay</h3>
+      </div>
+    
+    <div class="card mt-5" style="padding: 20px;">
+        <form  class="mt-7 p-3" [formGroup]="payForm" >
+                                      
+
+            <div class="form-group">
+                <label for="flightNumber">Flight Number</label>
+                <input type="number"  name="flightNumber" id="flightNumber" value = "{{flight.flightNumber}}" disabled >
+                
+            </div>
+
+            <div class="form-group">
+                <label for="flightName">Flight Name</label>
+                <input type="text"  name="flightName" id="flightName" value = "{{flight.flightName}}" disabled > 
+            </div>
+
+            
+            <div class="form-group">
+                <label for="flightFrom">From</label>
+                <br>
+                <input type="text"  name="flightFrom" value = "{{flight.flightFrom}}" disabled >   
+            </div>
+            <div class="form-group">
+                <label for="flightTo">To</label>
+                <br>
+                <input type="text"  name="flightTo"value = "{{flight.flightTo}}" disabled  >
+            </div>
+
+            
+            <div class="form-group">
+                <label for="flightDate">Departure Date</label>
+                <input type="text"  name="flightDate"  value = "{{departureDate}}" disabled >   
+            </div>
+
+            <div class="form-group">
+                <label for="flightDeparture">Departure Time</label>
+                <input type="text"  name="flightDeparture"  value = "{{flight.flightDeparture}}" disabled >                                             
+            </div>
+            <div class="form-group">
+                <label for="flightArrival">Arrival Time</label>
+                <input type="text"  name="flightArrival" value = "{{flight.flightArrival}}" disabled >           
+            </div> 
+            <div class="form-group">
+                <label for="flightDuration">Duration</label>
+                <br>
+                <input type="number"  name="flightDuration"  value = "{{flight.flightDuration}}" disabled >
+            </div>
+
+
+            <!-- <div class="form-floating mb-3">
+                <input type="text"  name="esPrice" value = "{{flight.esPrice}}" disabled >
+                <label for="esPrice">Economy Seat Price</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="number"  name="bsPrice" value = "{{flight.bsPrice}}" disabled>
+                <label for="bsPrice">Bussiness Seat Price</label>
+            </div> -->
+
+            <div >
+                <label for="classType" class="float-start mx-2 p-1">ClassType:</label>
+                
+                <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example" name="classType" formControlName = "classType" [(ngModel)]="classType">
+                    <option value="" disabled >Select Seat Type </option>
+                    <option value="Economy">Economy</option>
+                    <option value="Bussiness">Bussiness</option>                                                    
+                </select>
+            
+            </div>
+
+            <div class="form-group" *ngIf="classType=='Economy' ">
+                <label for="esPrice">Economy Seat Price</label>
+                <input type="number"  name="esPrice"  value = "{{flight.esPrice}}" disabled >
+            </div>
+
+            <div class="form-group" *ngIf="classType=='Bussiness' ">
+                <label for="bsPrice">Bussiness Seat Price</label>
+                <input type="number"  name="bsPrice"  value = "{{flight.bsPrice}}" disabled >
+            </div>
+            
+            
+            <div class="form-group" *ngIf="classType!='None' ">
+                <label for="seatNumber">Seat Number: </label>
+                <input type="number"  name="seatNumber" formControlName = "seatNumber" >
+            </div>
+
+            <!-- <div class="form-floating mb-3" *ngIf="classType!='None' ">
+                <input type="number"  name="paymentId" formControlName = "paymentId"  [(ngModel)]="paymentId">
+                <label for="paymentId">PaymentId: </label>
+            </div> -->
+
+         
+          <div style="margin-top: 12px ;" class="d-grid gap-2">
+            <button class="btn btn-primary" type="button" [disabled]="!payForm.valid" (click)="doPayment()">Pay</button>
+          </div>
+          
+    </form>
+    </div>

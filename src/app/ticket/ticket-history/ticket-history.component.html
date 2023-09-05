@@ -1,0 +1,43 @@
+<div style="margin-top: 50px; margin-left: 200px; margin-right: 200px; ">
+<h2 class="text-center">Ticket Reservation History</h2>
+<table class="table table-striped">
+    <thead class="table-primary">
+      <tr>
+        <th scope="col">Ticket Number</th>
+        <th scope="col">Flight Number</th>
+        <th scope="col">Flight Name</th>
+        <th scope="col">From</th>
+        <th scope="col">To</th>
+        <th scope="col">Departure Date</th>
+        <th scope="col">Departure Time</th>
+        <th scope="col">Arrival Time</th>
+        <th scope="col">Flight Duration</th>
+        <th scope="col">Seat Number</th> 
+        <th scope="col">Class</th>
+        <th scope="col">Booking Status</th> 
+        <th scope="col"> Cancel </th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ticket of ticketList" >
+        <td>{{ticket.ticketNumber}}</td>
+        <td>{{ticket.flight.flightNumber}}</td>
+        <td>{{ticket.flight.flightName}}</td>
+        <td>{{ticket.flight.flightFrom}}</td>
+        <td>{{ticket.flight.flightTo}}</td>
+        <td>{{ticket.flightDate}}</td>
+        <td>{{ticket.flight.flightDeparture}}</td>
+        <td>{{ticket.flight.flightArrival}}</td>
+        <td>{{ticket.flight.flightDuration}}</td>
+        <td>{{ticket.seatNumber}}</td>
+        <td>{{ticket.classType}}</td>
+        <td>{{ticket.status}}</td>
+        <td><button type="button" class="btn btn-danger" (click)="cancelticket(ticket.ticketNumber)" [disabled]="ticket.status == 'Cancelled'">Cancel</button></td>
+
+        
+      </tr>
+  
+    </tbody>
+  </table>
+</div>

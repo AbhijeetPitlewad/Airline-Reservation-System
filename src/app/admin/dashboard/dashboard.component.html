@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand logo"></a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav navpad">
+                <a routerLink="viewflight" routerLinkActive="active" class="nav-item nav-link navtext">View Flight</a>
+                <a routerLink="addflight" routerLinkActive="active" class="nav-item nav-link navtext">Add Flight</a>
+                <a routerLink="deleteflight" routerLinkActive="active" class="nav-item nav-link navtext">Delete Flight </a>
+                <a (click) = "logout()" class="nav-item nav-link navtext">Log Out</a>
+                
+                <!-- <a routerLink="/signup" routerLinkActive="active" class="nav-item nav-link navtext">Register</a> -->
+            </div>
+
+        </div>
+    </div>
+</nav>

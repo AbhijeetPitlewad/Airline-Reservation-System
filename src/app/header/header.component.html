@@ -1,0 +1,46 @@
+<nav id=nav1 class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a  class="navbar-brand" href="#">
+            <img src="https://e7.pngegg.com/pngimages/3/711/png-clipart-iran-air-flight-mehrabad-international-airport-airline-airplane-airline-logo-flight.png" alt="Logo" width="40" height="30" class="d-inline-block align-text-top">
+            <span id="logo">
+            AirCity
+            </span>
+          </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div [ngSwitch]="menuType" class="collapse navbar-collapse" id="navbarCollapse">
+            <div  class="navbar-nav">
+                
+                <a routerLink="home" class="nav-item nav-link active">Home</a>
+                <a routerLink="aboutUs" class="nav-item nav-link active">About Us</a>
+                <a routerLink="contactUs" class="nav-item nav-link active">Contact Us</a>
+                
+            </div>
+
+            <div *ngSwitchCase="'admin'" class="navbar-nav ms-auto">
+                <a routerLink="admin/admin-dashboard" class="nav-item nav-link active">Admin Dashboard</a>
+                <a routerLink="admin/admin-dashboard/add-flight" class="nav-item nav-link">Add Flight</a>
+                <a routerLink="admin/admin-dashboard/all-flights" class="nav-item nav-link">Show Flights</a>
+                <a routerLink="admin/admin-dashboard/delete-flight" class="nav-item nav-link">Delete Flights</a>
+            </div>
+
+            <div *ngSwitchCase="'user'" class="navbar-nav ms-auto">
+                <a routerLink="user/user-dashboard" class="nav-item nav-link active">User Dashboard</a>
+                <a routerLink="user/search-flight" class="nav-item nav-link">Book Flight</a>
+                <a routerLink="user/ticket-history" class="nav-item nav-link">Ticket history</a>
+            </div>
+
+            <div *ngSwitchCase="'default'" class="navbar-nav ms-auto">
+                <a (click)="loginSessionClear()" routerLink="home" class="nav-item nav-link">Login</a>
+            </div>
+            <div *ngSwitchCase="'admin'" class="navbar-nav ms-auto">
+                <a id="a1"  (click)="logout()" class="nav-item nav-link">Admin  |  Logout</a>
+            </div>
+            <div *ngSwitchCase="'user'" class="navbar-nav ms-auto">
+                <a id="a1" (click)="logout()" class="nav-item nav-link">User  |  Logout</a>
+            </div>
+
+        </div>
+    </div>
+</nav>

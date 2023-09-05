@@ -1,0 +1,97 @@
+<button style="margin-top: 40px; margin-left: 950px;" id="showTicketButton" class="btn btn-primary" (click)="showTicketDetails()"> Show Ticket Details</button>
+
+
+<div class="outer" *ngIf="clicked">
+                                <div class="card mt-5 p-3 mb-2 bg-secondary bg-gradient text-dark" style="align-items: center;">
+                                    <h3>Ticket Details</h3>
+                                  </div>
+                            
+                                <div class="card mt-5">
+                                  
+                                    <form  class="mt-7 p-3"  >
+
+                                            <div class="form-group">
+                                                <label for="ticketNymber">Ticket Number</label>
+                                                <input type="number"  name="ticketNumber" id="ticketNumber" value = "{{ticket.ticketNumber}}" disabled >
+                                            </div>
+                                      
+
+                                            <div class="form-group">
+                                                <label for="flightNumber">Flight Number</label>
+                                                <input type="number"  name="flightNumber" id="flightNumber" value = "{{ticket.flight.flightNumber}}" disabled >
+                                            </div>
+
+                                            <div class="form-group" >
+                                                <label for="userEmail">User Email </label>
+                                                <br>
+                                                <input type="text"  name="userEmail"  value = "{{ticket.user.userEmail}}" disabled>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="flightName">Flight Name</label>
+                                                <input type="text"  name="flightName" id="flightName" value = "{{ticket.flight.flightName}}" disabled >
+                                                
+                                            </div>
+
+                                            
+                                            <div class="form-group">
+                                                <label for="flightFrom">From</label>
+                                                <br>
+                                                <input type="text"  name="flightFrom" value = "{{ticket.flight.flightFrom}}" disabled >
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="flightTo">To</label>
+                                                <br>
+                                                <input type="text"  name="flightTo"value = "{{ticket.flight.flightTo}}" disabled  >
+                                            </div>
+
+                                            
+                                            <div class="form-group">
+                                                <label for="flightDate">Departure Date</label>
+                                                <input type="text"  name="flightDate"  value = "{{ticket.flightDate}}" disabled >
+                                            </div>
+
+                                             <div class="form-group">
+                                                <label for="flightDeparture">Departure Time</label>
+                                                <input type="text"  name="flightDeparture"  value = "{{ticket.flight.flightDeparture}}" disabled >
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="flightArrival">Arrival Time</label>
+                                                <input type="text"  name="flightArrival" value = "{{ticket.flight.flightArrival}}" disabled >
+                                            </div>  
+                                            <div class="form-group">
+                                                <label for="flightDuration">Duration</label>
+                                                <br>
+                                                <input type="number"  name="flightDuration"  value = "{{ticket.flight.flightDuration}}" disabled >
+                                            </div>
+
+                                        
+                                            
+                                            <div class="form-group">
+                                                <label for="seatNumber">Seat Number </label>
+                                                <input type="number"  name="seatNumber"  value = "{{ticket.seatNumber}}" disabled>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="status">Status </label>
+                                                <br>
+                                                <input type="text"  name="status"  value = "{{ticket.status}}" disabled>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="paymentId">Payment Id </label>
+                                                <input type="number"  name="paymentId"  value = "{{ticket.payment.paymentId}}" disabled>
+                                            </div>
+
+                                          <div id="ok" class="d-grid gap-2">
+                                            <button class="btn btn-primary" type="button" (click)="navigateToHome()">OK</button>
+                                          </div>
+                                          
+                                    </form>
+                        
+                                  
+
+    </div>
+
+
+

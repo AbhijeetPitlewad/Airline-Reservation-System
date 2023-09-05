@@ -1,0 +1,55 @@
+
+<!-- <div class="position-absolute top-50 start-50 translate-middle"> -->
+<div style="margin-top: 50px;" id="delete" >
+<h2 class="text-center">Delete Flight</h2>
+<div class="mb-3">
+    <label for="flightSearch" class="form-label"><b>Search Flight Number : </b></label>
+    <input type="number" class="form-control" id="flightSearch" placeholder="Enter Flight Number" [(ngModel)]="flightNumber">
+    <button style="margin-top:12px ;" id="search" type="button" class="btn btn-primary" (click)="searchFlightByFlightNumber(flightNumber)">Search</button>
+</div>
+</div>
+
+
+<div style="margin-top: 50px; margin-left: 400px; margin-right: 400px; ">
+<div *ngIf="flight!=undefined">
+
+<table class="table table-striped">
+    <thead class="table-primary">
+      <tr>
+        <th scope="col">Flight Number </th>
+        <th scope="col">Flight Name</th>
+        <th scope="col">From</th>
+        <th scope="col">To</th>
+        <th scope="col">Departure Time</th>
+        <th scope="col">Arrival Time</th>
+        <th scope="col">Flight Duration</th>
+        <!-- <th scope="col">Economy Seats</th> 
+        <th scope="col">Business Seats</th>  -->
+        <th scope="col">Price of ES</th> 
+        <th scope="col">Price of BS</th> 
+        <th scope="col">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  >
+        <td>{{flight.flightNumber}}</td>
+        <td>{{flight.flightName}}</td>
+        <td>{{flight.flightFrom}}</td>
+        <td>{{flight.flightTo}}</td>
+        <td>{{flight.flightDeparture}}</td>
+        <td>{{flight.flightArrival}}</td>
+        <td>{{flight.flightDuration}}</td>
+        <!-- <td>{{flight.numberOfEs}}</td> -->
+        <!-- <td>{{flight.numberOfBs}}</td> -->
+        <td>{{flight.esPrice}} &#x20B9;</td>
+        <td>{{flight.bsPrice}} &#x20B9;</td>
+        <td><button type="button" class="btn btn-danger" (click)="deleteFlight(flight.flightNumber)">Delete</button></td>
+      </tr>
+  
+    </tbody>
+  </table>
+
+</div>
+</div>
+
+<!-- </div> -->

@@ -1,0 +1,17 @@
+
+.homecontent
+{
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%,-50%);
+}
+.homecontent h1
+{
+    color: #000000;
+    font-size: 100px;
+}
+.homecontent a
+{
+    margin-top: 10px;
+}

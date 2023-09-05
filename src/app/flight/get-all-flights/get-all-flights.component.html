@@ -1,0 +1,38 @@
+<div style="margin-top: 50px; margin-left: 400px; margin-right: 400px; ">
+<h2 class="text-center">All Flight Details</h2>
+<table class="table table-striped">
+    <thead class="table-primary">
+      <tr>
+        <th scope="col">Flight Number </th>
+        <th scope="col">Flight Name</th>
+        <th scope="col">From</th>
+        <th scope="col">To</th>
+        <th scope="col">Departure Time</th>
+        <th scope="col">Arrival Time</th>
+        <th scope="col">Flight Duration</th>
+        <th scope="col">Economy Seats</th> 
+        <th scope="col">Business Seats</th> 
+        <th scope="col">Price of ES</th> 
+        <th scope="col">Price of BS</th> 
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let flight of listofFlights" >
+        <td>{{flight.flightNumber}}</td>
+        <td>{{flight.flightName}}</td>
+        <td>{{flight.flightFrom}}</td>
+        <td>{{flight.flightTo}}</td>
+        <td>{{flight.flightDeparture}}</td>
+        <td>{{flight.flightArrival}}</td>
+        <td>{{flight.flightDuration}}</td>
+        <td>{{flight.numberOfEs}}</td>
+        <td>{{flight.numberOfBs}}</td>
+        <td>{{flight.esPrice}} &#x20B9;</td>
+        <td>{{flight.bsPrice}} &#x20B9;</td>
+        
+      </tr>
+  
+    </tbody>
+  </table>
+</div>

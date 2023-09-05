@@ -1,0 +1,71 @@
+
+
+    <div class="card mt-5 p-3 mb-2 bg-secondary bg-gradient text-dark" style="align-items: center;">
+        <h1>Add Flight</h1>
+      </div>
+    
+    <div class="card mt-5" style="padding: 20px;">
+        <form [formGroup]="flightForm"  (ngSubmit)="addFlight()" >
+
+        <div class="form-Group">
+          <label for="flightNumber">Flight Number</label>
+          <input type="number"  name="flightNumber" id="flightNumber" formControlName="flightNumber">
+        </div>
+
+        <div class="form-Group">
+          <label for="flightName">Flight Name</label>
+          <input type="text"  name="flightName" id="flightName" formControlName="flightName" >
+        </div>
+
+        
+        <div class="form-Group">
+          <label for="flightFrom">From</label>  
+          <br>
+          <input type="text"  name="flightFrom" formControlName="flightFrom" >  
+        </div>
+        <div class="form-Group">
+          <label for="flightTo">To</label>
+          <br>
+          <input type="text"  name="flightTo"  formControlName="flightTo">  
+        </div>
+        <div class="form-Group">
+          <label for="flightDeparture">Departure Time</label>
+          <input type="text"  name="flightDeparture" formControlName="flightDeparture" >
+        </div>
+        <div class="form-Group">
+          <label for="flightArrival">Arrival Time</label>
+          <input type="text"  name="flightArrival" formControlName="flightArrival" >
+        </div> 
+        <div class="form-Group">
+          <label for="flightDuration">Duration</label>
+          <input type="number"  name="flightDuration" formControlName="flightDuration" >
+        </div>
+
+        <div class="form-Group">
+          <label for="numberOfEs">Economy Seats</label>
+          <input type="number"  name="numberOfEs" formControlName="numberOfEs">
+        </div>
+
+        <div class="form-Group">
+          <label for="numberOfBs">Business Seats</label>
+          <input type="number"  name="numberOfBs"  formControlName="numberOfBs"> 
+        </div>
+
+        <div class="form-Group">
+          <label for="esPrice">Economy Seat Price</label>
+          <input type="number"  name="esPrice" formControlName="esPrice" >
+        </div>
+
+        <div class="form-Group">
+          <label for="bsPrice">Bussiness Seat Price</label>
+          <input type="number"  name="bsPrice" formControlName="bsPrice">
+        </div>
+        
+
+     
+      <div class="d-grid gap-2">
+        <button style="margin-top:12px ;" class="btn btn-primary" type="submit" [disabled]="!flightForm.valid">Add Flight</button>
+    
+      </div>
+      </form>
+    </div>

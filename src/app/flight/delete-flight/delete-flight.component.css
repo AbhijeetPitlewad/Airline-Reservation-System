@@ -1,0 +1,17 @@
+#delete {
+    width: 500px;
+    margin: auto;
+  }
+
+input {
+    width: 425px;
+    
+  }
+
+select{
+    width: 425px;
+}
+
+#search{
+    width: 425px;
+}

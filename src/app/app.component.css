@@ -1,0 +1,25 @@
+.navbar
+{
+    background-color: #ffffff;
+}
+.navbar-light .navbar-nav .nav-link
+{
+    color: #000000;
+    font-size: 16px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover
+{
+    text-decoration: underline;
+}
+
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    color: rgb(0, 0, 0);
+    text-align: center;
+}

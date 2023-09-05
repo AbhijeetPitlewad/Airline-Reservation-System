@@ -1,0 +1,79 @@
+
+<div style="margin-top: 100px;" class="outer">
+    <div class="container"></div>
+           <div class="container-fluid">
+                       <div class="row align-items-center pad ">
+                           <div class="col-6 mx-auto"> 
+                               <div class="card text-center">
+                                   <h5 class="card-header center-text">Search Flight</h5>
+                               <form [formGroup]="searchFlightForm" (ngSubmit)="searchFlightsList()">
+                                   <div class="card-body">
+                                     <div class="row">
+                                         <div class="col-6">
+                                           
+                                         <label for="floatingInput">From</label>
+                                           <div class="form-floating mb-3">
+                                            
+                                               <div class="form-floating mb-3">                                                
+                                                   <select class="form-floating form-select my-2 " aria-label="Default select example" name="from" formControlName="from"  >
+                                                       <option value="" disabled>Select City</option>
+                                                       <option value="Mumbai">Mumbai</option>
+                                                       <option value="Pune">Pune</option>
+                                                       <option value="Bangalore">Bangalore</option>
+                                                       <option value="Chennai">Chennai</option>
+                                                       <option value="Delhi">Delhi</option>
+                                                       
+                                                     </select>
+                                               </div>
+                                               <!-- <label for="floatingInput">From</label> -->
+                                           </div> 
+   
+                                           <div class="form-floating mb-3" >
+                                               <input type="date" class="form-control" id="floatingInput" name="departureDate" formControlName="departureDate" >
+                                               <label for="floatingInput">Departure Date</label>
+                                           </div>
+                                       </div>
+   
+                                       <div class="col-6">
+                                           
+                                        <label for="floatingInput">To</label>
+                                           <div class="form-floating mb-3">
+                                            
+                                               <div class="form-floating mb-3">
+                                                   <select class="form-floating form-select my-2 " aria-label="Default select example" name="to" formControlName="to"   >
+                                                       <option value="" disabled>Select City</option>
+                                                       <option value="Mumbai">Mumbai</option>
+                                                       <option value="Pune">Pune</option>
+                                                       <option value="Bangalore">Bangalore</option>
+                                                       <option value="Chennai">Chennai</option>
+                                                       <option value="Delhi">Delhi</option>
+                                                     </select>
+                                               </div>
+                                               <!-- <label for="floatingInput">To</label> -->
+                                           </div>
+   
+                                           
+                                       </div>
+                                       <!-- <div class="col-6">
+                                           <div class="form-floating mb-3">
+                                               <input type="text" class="form-control" id="floatingInput"  name="Passenger"  >
+                                               <label for="floatingInput">Passenger(s)</label>
+                                           </div>
+                                       </div>   -->
+                                     </div>
+                                     
+                                         
+                             </div>
+                             <div class="d-grid gap-3 ms-3 mb-3">
+                               <button  class="btn btn-primary" type="submit">Search</button>
+                             </div>
+                            </form>
+                           
+                                     
+                                   </div>
+                                 </div>
+                           </div>
+                       </div>
+         </div>
+
+

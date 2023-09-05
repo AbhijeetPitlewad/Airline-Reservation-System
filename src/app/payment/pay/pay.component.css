@@ -1,0 +1,17 @@
+div {
+    width: 500px;
+    margin: auto;
+  }
+
+input {
+    width: 425px;
+    
+  }
+
+select{
+    width: 425px;
+}
+
+button{
+    width: 425px;
+}
